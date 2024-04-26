@@ -17,6 +17,6 @@ The entire program is based on the principle of track line following and line fi
 The complete code repository will be open to the public after April 13th, 2024.
 
 ## Contributors
-- [Yiyuan Pan, Lekai Chen, tszhang.cu@gmail.com]
+- [pyy030406@sjtu.edu.cn, Lekai Chen, tszhang.cu@gmail.com]
 
 Feel free to reach out to us for any questions or collaborations related to our project.
