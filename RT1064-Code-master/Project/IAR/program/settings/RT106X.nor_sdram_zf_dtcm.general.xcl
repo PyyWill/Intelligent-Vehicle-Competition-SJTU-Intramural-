@@ -1,0 +1,15 @@
+"E:\IAR\arm\bin\armproc.dll" 
+
+"E:\IAR\arm\bin\armsim2.dll" 
+
+"E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\RT1064-Code-master\Project\IAR\program\nor_sdram_zf_dtcm\Exe\RT106X.out" 
+
+--plugin="E:\IAR\arm\bin\armbat.dll" 
+
+--device_macro="E:\IAR\arm\config\debugger\NXP\iMXRT.dmac" 
+
+--device_macro="E:\IAR\arm\config\debugger\NXP\iMXRT_Trace.dmac" 
+
+
+
+
