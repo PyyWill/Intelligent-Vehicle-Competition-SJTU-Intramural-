@@ -133,7 +133,7 @@ Ifx_P*      get_port                    (gpio_pin_enum pin);
 //====================================================GPIO 基础函数====================================================
 void  gpio_set_level    (gpio_pin_enum pin, uint8 dat);
 uint8 gpio_get_level    (gpio_pin_enum pin);
-void  gpio_toggle_level (gpio_pin_enum pin);
+void  gpiotoggle_level (gpio_pin_enum pin);
 void  gpio_set_dir      (gpio_pin_enum pin, gpio_dir_enum dir, gpio_mode_enum pinconf);
 void  gpio_init         (gpio_pin_enum pin, gpio_dir_enum dir, uint8 dat, gpio_mode_enum pinconf);
 //====================================================GPIO 基础函数====================================================

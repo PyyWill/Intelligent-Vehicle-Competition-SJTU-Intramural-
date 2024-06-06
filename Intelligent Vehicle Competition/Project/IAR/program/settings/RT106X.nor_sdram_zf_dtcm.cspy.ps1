@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "E:\IAR\common\bin\cspybat" -f "D:\desktop\RT1064-Demo\Project\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --backend -f "D:\desktop\RT1064-Demo\Project\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
+& "E:\IAR\common\bin\cspybat" -f "E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --backend -f "E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
 }
 else
 {
-& "E:\IAR\common\bin\cspybat" -f "D:\desktop\RT1064-Demo\Project\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --debug_file=$debugfile --backend -f "D:\desktop\RT1064-Demo\Project\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
+& "E:\IAR\common\bin\cspybat" -f "E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --debug_file=$debugfile --backend -f "E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
 }

@@ -318,3 +318,13 @@ user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramu
 e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_components/seekfree_assistant.h :
 user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_components/seekfree_assistant_interface.h
 e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_components/seekfree_assistant_interface.h :
+user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/motor.h
+e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/motor.h :
+user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/servo.h
+e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/servo.h :
+user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/encoder.h
+e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/encoder.h :
+user/cpu0_main.o :	../user/isr.h
+../user/isr.h :
+user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_common/zf_common_headfile.h
+e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_common/zf_common_headfile.h :

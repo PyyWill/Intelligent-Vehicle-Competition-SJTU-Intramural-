@@ -1,141 +1,141 @@
-"D:\desktop\智能车\RT1064-Demo\Libraries\seekfree_libraries\board\board.c"
+"E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\seekfree_libraries\board\board.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\seekfree_libraries\board
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\seekfree_libraries\board
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\CODE
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\CODE
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\USER\inc
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\USER\inc
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\USER\src
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\USER\src
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\seekfree_libraries
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\seekfree_libraries
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\CMSIS\Include
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\CMSIS\Include
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\cmsis_drivers
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\cmsis_drivers
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\drives
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\drives
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\startup
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\startup
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\startup\MDK-ARM
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\startup\MDK-ARM
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\utilities
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\utilities
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\utilities\debug_console
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\utilities\debug_console
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\utilities\str
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\utilities\str
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\xip
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\xip
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\deceive
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\deceive
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\serial_manager
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\serial_manager
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\uart
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\uart
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\lists
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\lists
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\osa
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\osa
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\serial_manager\usb_cdc_adapter
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\components\serial_manager\usb_cdc_adapter
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\usb\include
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\usb\include
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\usb\phy
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\usb\phy
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\usb\device
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\usb\device
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\inc
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\inc
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\port
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\port
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\port\usdhc
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\port\usdhc
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\port\usdhc\interrupt
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\port\usdhc\interrupt
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\src
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\sdmmc\src
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\fatfs\source
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\fatfs\source
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\fatfs\source\fsl_sd_disk
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\nxp_libraries\middleware\fatfs\source\fsl_sd_disk
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\seekfree_libraries\common
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\seekfree_libraries\common
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\seekfree_libraries\board
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\seekfree_libraries\board
 -I
-D:\desktop\智能车\RT1064-Demo\Project\IAR\program\..\..\..\Libraries\seekfree_peripheral
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\IAR\program\..\..\..\Libraries\seekfree_peripheral
 -I
 E:\IAR\arm\inc
 -I
 E:\IAR\arm\inc\c
 -I
-D:\desktop\智能车\RT1064-Demo\Project\CODE
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\CODE
 -I
-D:\desktop\智能车\RT1064-Demo\Project\USER\inc
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\USER\inc
 -I
-D:\desktop\智能车\RT1064-Demo\Project\USER\src
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Project\USER\src
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\seekfree_libraries
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\seekfree_libraries
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\CMSIS\Include
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\CMSIS\Include
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\cmsis_drivers
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\cmsis_drivers
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\drives
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\drives
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\startup
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\startup
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\startup\MDK-ARM
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\startup\MDK-ARM
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\utilities
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\utilities
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\utilities\debug_console
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\utilities\debug_console
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\utilities\str
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\utilities\str
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\xip
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\xip
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\deceive
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\deceive
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\components\serial_manager
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\components\serial_manager
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\components\uart
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\components\uart
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\components\lists
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\components\lists
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\components\osa
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\components\osa
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\components\serial_manager\usb_cdc_adapter
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\components\serial_manager\usb_cdc_adapter
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\usb\include
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\usb\include
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\usb\phy
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\usb\phy
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\usb\device
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\usb\device
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\sdmmc\inc
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\sdmmc\inc
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\sdmmc\port
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\sdmmc\port
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\sdmmc\port\usdhc
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\sdmmc\port\usdhc
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\sdmmc\port\usdhc\interrupt
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\sdmmc\port\usdhc\interrupt
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\sdmmc\src
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\sdmmc\src
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\fatfs\source
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\fatfs\source
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\nxp_libraries\middleware\fatfs\source\fsl_sd_disk
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\nxp_libraries\middleware\fatfs\source\fsl_sd_disk
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\seekfree_libraries\common
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\seekfree_libraries\common
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\seekfree_libraries\board
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\seekfree_libraries\board
 -I
-D:\desktop\智能车\RT1064-Demo\Libraries\seekfree_peripheral
+E:\GitRepository\Intelligent-Vehicle-Competition-SJTU-Intramural-\Intelligent Vehicle Competition\Libraries\seekfree_peripheral
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=127
 -D__CHAR_MIN__=(-__CHAR_MAX__-1)

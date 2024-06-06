@@ -36,10 +36,12 @@
 #pragma section all "cpu0_dsram"
 // 将本语句与#pragma section all restore语句之间的全局变量都放在CPU0的RAM中
 
-// 本例程是开源库空工程 可用作移植或者测试各类内外设
-// 本例程是开源库空工程 可用作移植或者测试各类内外设
-// 本例程是开源库空工程 可用作移植或者测试各类内外设
-
+// **************************** 自定义库区域 ****************************
+#include "motor.h"
+#include "servo.h"
+#include "encoder.h"
+#include "isr.h"
+// **************************** 自定义库区域 ****************************
 
 // **************************** 代码区域 ****************************
 int core0_main(void)
@@ -49,15 +51,18 @@ int core0_main(void)
     // 此处编写用户代码 例如外设初始化代码等
 
 
-
+    motor_init();
+    motor2_setdir(Forward);
+    motor2_setduty(18);
+    servo_init();
+    encoder_init();
+    isr_init();
 
     // 此处编写用户代码 例如外设初始化代码等
     cpu_wait_event_ready();         // 等待所有核心初始化完毕
     while (TRUE)
     {
         // 此处编写需要循环执行的代码
-
-
 
 
         // 此处编写需要循环执行的代码

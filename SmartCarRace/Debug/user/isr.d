@@ -320,3 +320,5 @@ user/isr.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/S
 e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_components/seekfree_assistant.h :
 user/isr.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_components/seekfree_assistant_interface.h
 e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_components/seekfree_assistant_interface.h :
+user/isr.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/encoder.h
+e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/encoder.h :

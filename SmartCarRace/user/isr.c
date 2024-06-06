@@ -35,6 +35,22 @@
 
 #include "isr_config.h"
 #include "isr.h"
+#include "encoder.h"
+
+float velocity1_angle;// 编码器1转速
+float velocity2_angle;// 编码器2转速
+
+//-------------------------------------------------------------------------------------------------------------------
+// 函数简介     定时中断初始化
+// 参数说明     void
+// 返回参数     void
+// 使用示例     isr_init();
+// 备注信息
+//-------------------------------------------------------------------------------------------------------------------
+void isr_init()
+{
+    pit_init(ISR_CHANNEL, ISR_TIME);// 定时ITR_TIME的时间
+}
 
 // 对于TC系列默认是不支持中断嵌套的，希望支持中断嵌套需要在中断内使用 interrupt_global_enable(0); 来开启中断嵌套
 // 简单点说实际上进入中断后TC系列的硬件自动调用了 interrupt_global_disable(); 来拒绝响应任何的中断，因此需要我们自己手动调用 interrupt_global_enable(0); 来开启中断的响应。
@@ -45,11 +61,18 @@ IFX_INTERRUPT(cc60_pit_ch0_isr, CCU6_0_CH0_INT_VECTAB_NUM, CCU6_0_CH0_ISR_PRIORI
     interrupt_global_enable(0);                     // 开启中断嵌套
     pit_clear_flag(CCU60_CH0);
 
+    int16_t ecd1;
+    int16_t ecd2;
 
-
-
+    // 刷新编码器
+    encoder_refresh();
+    // 读取两个编码器的值
+    ecd1 = encoder1_get();
+    ecd2 = encoder2_get();
+    // 计算编码器转速(rps)
+    velocity1_angle = (float)ecd1 / PULSE_PRE_CYCLE / (ISR_TIME / 1000000.0);
+    velocity2_angle = (float)ecd2 / PULSE_PRE_CYCLE / (ISR_TIME / 1000000.0);
 }
-
 
 IFX_INTERRUPT(cc60_pit_ch1_isr, CCU6_0_CH1_INT_VECTAB_NUM, CCU6_0_CH1_ISR_PRIORITY)
 {
