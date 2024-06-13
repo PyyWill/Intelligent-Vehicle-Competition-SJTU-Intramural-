@@ -1,47 +1,47 @@
 /*********************************************************************************************************************
-* TC387 Opensourec Library ¼´£¨TC387 ¿ªÔ´¿â£©ÊÇÒ»¸ö»ùÓÚ¹Ù·½ SDK ½Ó¿ÚµÄµÚÈı·½¿ªÔ´¿â
-* Copyright (c) 2022 SEEKFREE Öğ·É¿Æ¼¼
+* TC387 Opensourec Library å³ï¼ˆTC387 å¼€æºåº“ï¼‰æ˜¯ä¸€ä¸ªåŸºäºå®˜æ–¹ SDK æ¥å£çš„ç¬¬ä¸‰æ–¹å¼€æºåº“
+* Copyright (c) 2022 SEEKFREE é€é£ç§‘æŠ€
 *
-* ±¾ÎÄ¼şÊÇ TC387 ¿ªÔ´¿âµÄÒ»²¿·Ö
+* æœ¬æ–‡ä»¶æ˜¯ TC387 å¼€æºåº“çš„ä¸€éƒ¨åˆ†
 *
-* TC387 ¿ªÔ´¿â ÊÇÃâ·ÑÈí¼ş
-* Äú¿ÉÒÔ¸ù¾İ×ÔÓÉÈí¼ş»ù½ğ»á·¢²¼µÄ GPL£¨GNU General Public License£¬¼´ GNUÍ¨ÓÃ¹«¹²Ğí¿ÉÖ¤£©µÄÌõ¿î
-* ¼´ GPL µÄµÚ3°æ£¨¼´ GPL3.0£©»ò£¨ÄúÑ¡ÔñµÄ£©ÈÎºÎºóÀ´µÄ°æ±¾£¬ÖØĞÂ·¢²¼ºÍ/»òĞŞ¸ÄËü
+* TC387 å¼€æºåº“ æ˜¯å…è´¹è½¯ä»¶
+* æ‚¨å¯ä»¥æ ¹æ®è‡ªç”±è½¯ä»¶åŸºé‡‘ä¼šå‘å¸ƒçš„ GPLï¼ˆGNU General Public Licenseï¼Œå³ GNUé€šç”¨å…¬å…±è®¸å¯è¯ï¼‰çš„æ¡æ¬¾
+* å³ GPL çš„ç¬¬3ç‰ˆï¼ˆå³ GPL3.0ï¼‰æˆ–ï¼ˆæ‚¨é€‰æ‹©çš„ï¼‰ä»»ä½•åæ¥çš„ç‰ˆæœ¬ï¼Œé‡æ–°å‘å¸ƒå’Œ/æˆ–ä¿®æ”¹å®ƒ
 *
-* ±¾¿ªÔ´¿âµÄ·¢²¼ÊÇÏ£ÍûËüÄÜ·¢»Ó×÷ÓÃ£¬µ«²¢Î´¶ÔÆä×÷ÈÎºÎµÄ±£Ö¤
-* ÉõÖÁÃ»ÓĞÒşº¬µÄÊÊÏúĞÔ»òÊÊºÏÌØ¶¨ÓÃÍ¾µÄ±£Ö¤
-* ¸ü¶àÏ¸½ÚÇë²Î¼û GPL
+* æœ¬å¼€æºåº“çš„å‘å¸ƒæ˜¯å¸Œæœ›å®ƒèƒ½å‘æŒ¥ä½œç”¨ï¼Œä½†å¹¶æœªå¯¹å…¶ä½œä»»ä½•çš„ä¿è¯
+* ç”šè‡³æ²¡æœ‰éšå«çš„é€‚é”€æ€§æˆ–é€‚åˆç‰¹å®šç”¨é€”çš„ä¿è¯
+* æ›´å¤šç»†èŠ‚è¯·å‚è§ GPL
 *
-* ÄúÓ¦¸ÃÔÚÊÕµ½±¾¿ªÔ´¿âµÄÍ¬Ê±ÊÕµ½Ò»·İ GPL µÄ¸±±¾
-* Èç¹ûÃ»ÓĞ£¬Çë²ÎÔÄ<https://www.gnu.org/licenses/>
+* æ‚¨åº”è¯¥åœ¨æ”¶åˆ°æœ¬å¼€æºåº“çš„åŒæ—¶æ”¶åˆ°ä¸€ä»½ GPL çš„å‰¯æœ¬
+* å¦‚æœæ²¡æœ‰ï¼Œè¯·å‚é˜…<https://www.gnu.org/licenses/>
 *
-* ¶îÍâ×¢Ã÷£º
-* ±¾¿ªÔ´¿âÊ¹ÓÃ GPL3.0 ¿ªÔ´Ğí¿ÉÖ¤Ğ­Òé ÒÔÉÏĞí¿ÉÉêÃ÷ÎªÒëÎÄ°æ±¾
-* Ğí¿ÉÉêÃ÷Ó¢ÎÄ°æÔÚ libraries/doc ÎÄ¼ş¼ĞÏÂµÄ GPL3_permission_statement.txt ÎÄ¼şÖĞ
-* Ğí¿ÉÖ¤¸±±¾ÔÚ libraries ÎÄ¼ş¼ĞÏÂ ¼´¸ÃÎÄ¼ş¼ĞÏÂµÄ LICENSE ÎÄ¼ş
-* »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌĞò µ«ĞŞ¸ÄÄÚÈİÊ±±ØĞë±£ÁôÖğ·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷£¨¼´±¾ÉùÃ÷£©
+* é¢å¤–æ³¨æ˜ï¼š
+* æœ¬å¼€æºåº“ä½¿ç”¨ GPL3.0 å¼€æºè®¸å¯è¯åè®® ä»¥ä¸Šè®¸å¯ç”³æ˜ä¸ºè¯‘æ–‡ç‰ˆæœ¬
+* è®¸å¯ç”³æ˜è‹±æ–‡ç‰ˆåœ¨ libraries/doc æ–‡ä»¶å¤¹ä¸‹çš„ GPL3_permission_statement.txt æ–‡ä»¶ä¸­
+* è®¸å¯è¯å‰¯æœ¬åœ¨ libraries æ–‡ä»¶å¤¹ä¸‹ å³è¯¥æ–‡ä»¶å¤¹ä¸‹çš„ LICENSE æ–‡ä»¶
+* æ¬¢è¿å„ä½ä½¿ç”¨å¹¶ä¼ æ’­æœ¬ç¨‹åº ä½†ä¿®æ”¹å†…å®¹æ—¶å¿…é¡»ä¿ç•™é€é£ç§‘æŠ€çš„ç‰ˆæƒå£°æ˜ï¼ˆå³æœ¬å£°æ˜ï¼‰
 *
-* ÎÄ¼şÃû³Æ          zf_device_wireless_uart
-* ¹«Ë¾Ãû³Æ          ³É¶¼Öğ·É¿Æ¼¼ÓĞÏŞ¹«Ë¾
-* °æ±¾ĞÅÏ¢          ²é¿´ libraries/doc ÎÄ¼ş¼ĞÄÚ version ÎÄ¼ş °æ±¾ËµÃ÷
-* ¿ª·¢»·¾³          ADS v1.9.20
-* ÊÊÓÃÆ½Ì¨          TC387QP
-* µêÆÌÁ´½Ó          https://seekfree.taobao.com/
+* æ–‡ä»¶åç§°          zf_device_wireless_uart
+* å…¬å¸åç§°          æˆéƒ½é€é£ç§‘æŠ€æœ‰é™å…¬å¸
+* ç‰ˆæœ¬ä¿¡æ¯          æŸ¥çœ‹ libraries/doc æ–‡ä»¶å¤¹å†… version æ–‡ä»¶ ç‰ˆæœ¬è¯´æ˜
+* å¼€å‘ç¯å¢ƒ          ADS v1.9.20
+* é€‚ç”¨å¹³å°          TC387QP
+* åº—é“ºé“¾æ¥          https://seekfree.taobao.com/
 *
-* ĞŞ¸Ä¼ÇÂ¼
-* ÈÕÆÚ              ×÷Õß                ±¸×¢
+* ä¿®æ”¹è®°å½•
+* æ—¥æœŸ              ä½œè€…                å¤‡æ³¨
 * 2022-11-04       pudding            first version
 ********************************************************************************************************************/
 /*********************************************************************************************************************
-* ½ÓÏß¶¨Òå£º
+* æ¥çº¿å®šä¹‰ï¼š
 *                  ------------------------------------
-*                  Ä£¿é¹Ü½Å             µ¥Æ¬»ú¹Ü½Å
-*                  RX                 ²é¿´ zf_device_wireless_uart.h ÖĞ WIRELESS_UART_RX_PINx ºê¶¨Òå
-*                  TX                 ²é¿´ zf_device_wireless_uart.h ÖĞ WIRELESS_UART_TX_PINx ºê¶¨Òå
-*                  RTS                ²é¿´ zf_device_wireless_uart.h ÖĞ WIRELESS_UART_RTS_PINx ºê¶¨Òå
-*                  VCC                3.3VµçÔ´
-*                  GND                µçÔ´µØ
-*                  ÆäÓàÒı½ÅĞü¿Õ
+*                  æ¨¡å—ç®¡è„š             å•ç‰‡æœºç®¡è„š
+*                  RX                 æŸ¥çœ‹ zf_device_wireless_uart.h ä¸­ WIRELESS_UART_RX_PINx å®å®šä¹‰
+*                  TX                 æŸ¥çœ‹ zf_device_wireless_uart.h ä¸­ WIRELESS_UART_TX_PINx å®å®šä¹‰
+*                  RTS                æŸ¥çœ‹ zf_device_wireless_uart.h ä¸­ WIRELESS_UART_RTS_PINx å®å®šä¹‰
+*                  VCC                3.3Vç”µæº
+*                  GND                ç”µæºåœ°
+*                  å…¶ä½™å¼•è„šæ‚¬ç©º
 *                  ------------------------------------
 ********************************************************************************************************************/
 
@@ -63,11 +63,29 @@ static volatile uint8                                   wireless_auto_baud_data[
 #endif
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÎŞÏß×ª´®¿ÚÄ£¿é ·¢ËÍÊı¾İ
-// ²ÎÊıËµÃ÷     data            8bit Êı¾İ
-// ·µ»Ø²ÎÊı     uint32          Ê£Óà·¢ËÍ³¤¶È 0-·¢ËÍÍê±Ï 1-Î´·¢ËÍÍê³É
-// Ê¹ÓÃÊ¾Àı     wireless_uart_send_byte(data);
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     æ— çº¿è½¬ä¸²å£æ¨¡å— å‘é€intæ•°æ®
+
+// å¤‡æ³¨ä¿¡æ¯
+//-------------------------------------------------------------------------------------------------------------------
+
+void wireless_send_number(uint32_t number)              //ç”¨æ— çº¿ä¸²å£å‘é€intå‹æ•°å­—
+{
+  // å‘é€å›è½¦æ¢è¡Œï¼Œç”¨äºåˆ†éš”æ•°æ®
+    wireless_uart_send_byte('\r');
+    wireless_uart_send_byte('\n');
+  // å®šä¹‰ä¸€ä¸ªç¼“å†²åŒºæ¥å­˜å‚¨è½¬æ¢åçš„ASCIIç 
+    char ascii_buffer[20];                              // å‡è®¾æœ€å¤§çš„æ•°å­—ä¸º20ä½
+    sprintf(ascii_buffer, "%d", number);                //å°†æ•°å­—è½¬æ¢ä¸ºå­—ç¬¦ä¸²
+    uint32_t len = strlen(ascii_buffer);                // è®¡ç®—å­—ç¬¦ä¸²çš„é•¿åº¦
+    wireless_uart_send_buffer((const uint8_t *)ascii_buffer, len);              // å‘é€ASCIIç ç¼“å†²åŒºåˆ°ä¸²å£
+
+}
+//-------------------------------------------------------------------------------------------------------------------
+// å‡½æ•°ç®€ä»‹     æ— çº¿è½¬ä¸²å£æ¨¡å— å‘é€æ•°æ®
+// å‚æ•°è¯´æ˜     data            8bit æ•°æ®
+// è¿”å›å‚æ•°     uint32          å‰©ä½™å‘é€é•¿åº¦ 0-å‘é€å®Œæ¯• 1-æœªå‘é€å®Œæˆ
+// ä½¿ç”¨ç¤ºä¾‹     wireless_uart_send_byte(data);
+// å¤‡æ³¨ä¿¡æ¯
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wireless_uart_send_byte (const uint8 data)
 {
@@ -76,7 +94,7 @@ uint32 wireless_uart_send_byte (const uint8 data)
     {
         if(!gpio_get_level(WIRELESS_UART_RTS_PIN))
         {
-            uart_write_byte(WIRELESS_UART_INDEX, data);                         // ·¢ËÍÊı¾İ
+            uart_write_byte(WIRELESS_UART_INDEX, data);                         // å‘é€æ•°æ®
             break;
         }
         time_count --;
@@ -86,12 +104,12 @@ uint32 wireless_uart_send_byte (const uint8 data)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÎŞÏß×ª´®¿ÚÄ£¿é ·¢ËÍÊı¾İ¿é
-// ²ÎÊıËµÃ÷     *buff           ·¢ËÍ»º³åÇø
-// ²ÎÊıËµÃ÷     len             ·¢ËÍÊı¾İ³¤¶È
-// ·µ»Ø²ÎÊı     uint32          Ê£Óà·¢ËÍ³¤¶È
-// Ê¹ÓÃÊ¾Àı     wireless_uart_send_buffer(buff, 64);
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     æ— çº¿è½¬ä¸²å£æ¨¡å— å‘é€æ•°æ®å—
+// å‚æ•°è¯´æ˜     *buff           å‘é€ç¼“å†²åŒº
+// å‚æ•°è¯´æ˜     len             å‘é€æ•°æ®é•¿åº¦
+// è¿”å›å‚æ•°     uint32          å‰©ä½™å‘é€é•¿åº¦
+// ä½¿ç”¨ç¤ºä¾‹     wireless_uart_send_buffer(buff, 64);
+// å¤‡æ³¨ä¿¡æ¯
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wireless_uart_send_buffer (const uint8 *buff, uint32 len)
 {
@@ -99,27 +117,27 @@ uint32 wireless_uart_send_buffer (const uint8 *buff, uint32 len)
     uint16 time_count = 0;
     while(0 != len)
     {
-        if(!gpio_get_level(WIRELESS_UART_RTS_PIN))                              // Èç¹ûRTSÎªµÍµçÆ½ Ôò¼ÌĞø·¢ËÍÊı¾İ
+        if(!gpio_get_level(WIRELESS_UART_RTS_PIN))                              // å¦‚æœRTSä¸ºä½ç”µå¹³ åˆ™ç»§ç»­å‘é€æ•°æ®
         {
-            if(30 <= len)                                                       // Êı¾İ·Ö 30byte Ã¿°ü·¢ËÍ
+            if(30 <= len)                                                       // æ•°æ®åˆ† 30byte æ¯åŒ…å‘é€
             {
-                uart_write_buffer(WIRELESS_UART_INDEX, buff, 30);               // ·¢ËÍÊı¾İ
-                buff += 30;                                                     // µØÖ·Æ«ÒÆ
-                len -= 30;                                                      // ÊıÁ¿
+                uart_write_buffer(WIRELESS_UART_INDEX, buff, 30);               // å‘é€æ•°æ®
+                buff += 30;                                                     // åœ°å€åç§»
+                len -= 30;                                                      // æ•°é‡
                 time_count = 0;
             }
-            else                                                                // ²»×ã 30byte µÄÊı¾İÒ»´ÎĞÔ·¢ËÍÍê±Ï
+            else                                                                // ä¸è¶³ 30byte çš„æ•°æ®ä¸€æ¬¡æ€§å‘é€å®Œæ¯•
             {
-                uart_write_buffer(WIRELESS_UART_INDEX, buff, len);              // ·¢ËÍÊı¾İ
+                uart_write_buffer(WIRELESS_UART_INDEX, buff, len);              // å‘é€æ•°æ®
                 len = 0;
                 break;
             }
         }
-        else                                                                    // Èç¹ûRTSÎª¸ßµçÆ½ ÔòÄ£¿éÃ¦
+        else                                                                    // å¦‚æœRTSä¸ºé«˜ç”µå¹³ åˆ™æ¨¡å—å¿™
         {
-            if(WIRELESS_UART_TIMEOUT_COUNT <= (++ time_count))                  // ³¬³öÁË×î´óµÈ´ıÊ±¼ä
+            if(WIRELESS_UART_TIMEOUT_COUNT <= (++ time_count))                  // è¶…å‡ºäº†æœ€å¤§ç­‰å¾…æ—¶é—´
             {
-                break;                                                          // ÍË³ö·¢ËÍ
+                break;                                                          // é€€å‡ºå‘é€
             }
             system_delay_ms(1);
         }
@@ -128,11 +146,11 @@ uint32 wireless_uart_send_buffer (const uint8 *buff, uint32 len)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÎŞÏß×ª´®¿ÚÄ£¿é ·¢ËÍ×Ö·û´®
-// ²ÎÊıËµÃ÷     *str            Òª·¢ËÍµÄ×Ö·û´®µØÖ·
-// ·µ»Ø²ÎÊı     uint32          Ê£Óà·¢ËÍ³¤¶È
-// Ê¹ÓÃÊ¾Àı     wireless_uart_send_string("Believe in yourself.");
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     æ— çº¿è½¬ä¸²å£æ¨¡å— å‘é€å­—ç¬¦ä¸²
+// å‚æ•°è¯´æ˜     *str            è¦å‘é€çš„å­—ç¬¦ä¸²åœ°å€
+// è¿”å›å‚æ•°     uint32          å‰©ä½™å‘é€é•¿åº¦
+// ä½¿ç”¨ç¤ºä¾‹     wireless_uart_send_string("Believe in yourself.");
+// å¤‡æ³¨ä¿¡æ¯
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wireless_uart_send_string (const char *str)
 {
@@ -141,27 +159,27 @@ uint32 wireless_uart_send_string (const char *str)
     uint32 len = strlen(str);
     while(0 != len)
     {
-        if(!gpio_get_level(WIRELESS_UART_RTS_PIN))                              // Èç¹ûRTSÎªµÍµçÆ½ Ôò¼ÌĞø·¢ËÍÊı¾İ
+        if(!gpio_get_level(WIRELESS_UART_RTS_PIN))                              // å¦‚æœRTSä¸ºä½ç”µå¹³ åˆ™ç»§ç»­å‘é€æ•°æ®
         {
-            if(30 <= len)                                                       // Êı¾İ·Ö 30byte Ã¿°ü·¢ËÍ
+            if(30 <= len)                                                       // æ•°æ®åˆ† 30byte æ¯åŒ…å‘é€
             {
-                uart_write_buffer(WIRELESS_UART_INDEX, (const uint8 *)str, 30); // ·¢ËÍÊı¾İ
-                str += 30;                                                      // µØÖ·Æ«ÒÆ
-                len -= 30;                                                      // ÊıÁ¿
+                uart_write_buffer(WIRELESS_UART_INDEX, (const uint8 *)str, 30); // å‘é€æ•°æ®
+                str += 30;                                                      // åœ°å€åç§»
+                len -= 30;                                                      // æ•°é‡
                 time_count = 0;
             }
-            else                                                                // ²»×ã 30byte µÄÊı¾İÒ»´ÎĞÔ·¢ËÍÍê±Ï
+            else                                                                // ä¸è¶³ 30byte çš„æ•°æ®ä¸€æ¬¡æ€§å‘é€å®Œæ¯•
             {
-                uart_write_buffer(WIRELESS_UART_INDEX, (const uint8 *)str, len);// ·¢ËÍÊı¾İ
+                uart_write_buffer(WIRELESS_UART_INDEX, (const uint8 *)str, len);// å‘é€æ•°æ®
                 len = 0;
                 break;
             }
         }
-        else                                                                    // Èç¹ûRTSÎª¸ßµçÆ½ ÔòÄ£¿éÃ¦
+        else                                                                    // å¦‚æœRTSä¸ºé«˜ç”µå¹³ åˆ™æ¨¡å—å¿™
         {
-            if(WIRELESS_UART_TIMEOUT_COUNT <= (++ time_count))                  // ³¬³öÁË×î´óµÈ´ıÊ±¼ä
+            if(WIRELESS_UART_TIMEOUT_COUNT <= (++ time_count))                  // è¶…å‡ºäº†æœ€å¤§ç­‰å¾…æ—¶é—´
             {
-                break;                                                          // ÍË³ö·¢ËÍ
+                break;                                                          // é€€å‡ºå‘é€
             }
             system_delay_ms(1);
         }
@@ -170,12 +188,12 @@ uint32 wireless_uart_send_string (const char *str)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÎŞÏß×ª´®¿ÚÄ£¿é ·¢ËÍÉãÏñÍ·Í¼ÏñÖÁÉÏÎ»»ú²é¿´Í¼Ïñ
-// ²ÎÊıËµÃ÷     *image_addr     ĞèÒª·¢ËÍµÄÍ¼ÏñµØÖ·
-// ²ÎÊıËµÃ÷     image_size      Í¼ÏñµÄ´óĞ¡
-// ·µ»Ø²ÎÊı     void
-// Ê¹ÓÃÊ¾Àı     wireless_uart_send_image(&mt9v03x_image[0][0], MT9V03X_IMAGE_SIZE);
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     æ— çº¿è½¬ä¸²å£æ¨¡å— å‘é€æ‘„åƒå¤´å›¾åƒè‡³ä¸Šä½æœºæŸ¥çœ‹å›¾åƒ
+// å‚æ•°è¯´æ˜     *image_addr     éœ€è¦å‘é€çš„å›¾åƒåœ°å€
+// å‚æ•°è¯´æ˜     image_size      å›¾åƒçš„å¤§å°
+// è¿”å›å‚æ•°     void
+// ä½¿ç”¨ç¤ºä¾‹     wireless_uart_send_image(&mt9v03x_image[0][0], MT9V03X_IMAGE_SIZE);
+// å¤‡æ³¨ä¿¡æ¯
 //-------------------------------------------------------------------------------------------------------------------
 void wireless_uart_send_image (const uint8 *image_addr, uint32 image_size)
 {
@@ -186,12 +204,12 @@ void wireless_uart_send_image (const uint8 *image_addr, uint32 image_size)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÎŞÏß×ª´®¿ÚÄ£¿é ¶ÁÈ¡»º³å
-// ²ÎÊıËµÃ÷     *buff           ½ÓÊÕ»º³åÇø
-// ²ÎÊıËµÃ÷     len             ¶ÁÈ¡Êı¾İ³¤¶È
-// ·µ»Ø²ÎÊı     uint32          Êµ¼Ê¶ÁÈ¡Êı¾İ³¤¶È
-// Ê¹ÓÃÊ¾Àı     wireless_uart_read_buffer(buff, 32);
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     æ— çº¿è½¬ä¸²å£æ¨¡å— è¯»å–ç¼“å†²
+// å‚æ•°è¯´æ˜     *buff           æ¥æ”¶ç¼“å†²åŒº
+// å‚æ•°è¯´æ˜     len             è¯»å–æ•°æ®é•¿åº¦
+// è¿”å›å‚æ•°     uint32          å®é™…è¯»å–æ•°æ®é•¿åº¦
+// ä½¿ç”¨ç¤ºä¾‹     wireless_uart_read_buffer(buff, 32);
+// å¤‡æ³¨ä¿¡æ¯
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wireless_uart_read_buffer (uint8 *buff, uint32 len)
 {
@@ -202,19 +220,19 @@ uint32 wireless_uart_read_buffer (uint8 *buff, uint32 len)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÎŞÏß×ª´®¿ÚÄ£¿é ´®¿ÚÖĞ¶Ï»Øµ÷º¯Êı
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     void
-// Ê¹ÓÃÊ¾Àı     wireless_uart_callback();
-// ±¸×¢ĞÅÏ¢     ¸Ãº¯ÊıÔÚ ISR ÎÄ¼ş ´®¿ÚÖĞ¶Ï³ÌĞò±»µ÷ÓÃ
-//              ÓÉ´®¿ÚÖĞ¶Ï·şÎñº¯Êıµ÷ÓÃ wireless_module_uart_handler() º¯Êı
-//              ÔÙÓÉ wireless_module_uart_handler() º¯Êıµ÷ÓÃ±¾º¯Êı
+// å‡½æ•°ç®€ä»‹     æ— çº¿è½¬ä¸²å£æ¨¡å— ä¸²å£ä¸­æ–­å›è°ƒå‡½æ•°
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     void
+// ä½¿ç”¨ç¤ºä¾‹     wireless_uart_callback();
+// å¤‡æ³¨ä¿¡æ¯     è¯¥å‡½æ•°åœ¨ ISR æ–‡ä»¶ ä¸²å£ä¸­æ–­ç¨‹åºè¢«è°ƒç”¨
+//              ç”±ä¸²å£ä¸­æ–­æœåŠ¡å‡½æ•°è°ƒç”¨ wireless_module_uart_handler() å‡½æ•°
+//              å†ç”± wireless_module_uart_handler() å‡½æ•°è°ƒç”¨æœ¬å‡½æ•°
 //-------------------------------------------------------------------------------------------------------------------
 void wireless_uart_callback (void)
 {
     uart_query_byte(WIRELESS_UART_INDEX, &wireless_uart_data);
     fifo_write_buffer(&wireless_uart_fifo, &wireless_uart_data, 1);
-#if WIRELESS_UART_AUTO_BAUD_RATE                                                // ¿ªÆô×Ô¶¯²¨ÌØÂÊ
+#if WIRELESS_UART_AUTO_BAUD_RATE                                                // å¼€å¯è‡ªåŠ¨æ³¢ç‰¹ç‡
     if(WIRELESS_UART_AUTO_BAUD_RATE_START == wireless_auto_baud_flag && 3 == fifo_used(&wireless_uart_fifo))
     {
         uint32 wireless_auto_baud_count = 3;
@@ -225,11 +243,11 @@ void wireless_uart_callback (void)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÎŞÏß×ª´®¿ÚÄ£¿é ³õÊ¼»¯
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     void
-// Ê¹ÓÃÊ¾Àı     wireless_uart_init();
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     æ— çº¿è½¬ä¸²å£æ¨¡å— åˆå§‹åŒ–
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     void
+// ä½¿ç”¨ç¤ºä¾‹     wireless_uart_init();
+// å¤‡æ³¨ä¿¡æ¯
 //-------------------------------------------------------------------------------------------------------------------
 uint8 wireless_uart_init (void)
 {
@@ -238,11 +256,11 @@ uint8 wireless_uart_init (void)
 
     fifo_init(&wireless_uart_fifo, FIFO_DATA_8BIT, wireless_uart_buffer, WIRELESS_UART_BUFFER_SIZE);
     gpio_init(WIRELESS_UART_RTS_PIN, GPI, GPIO_HIGH, GPI_PULL_UP);
-#if(0 == WIRELESS_UART_AUTO_BAUD_RATE)                                          // ¹Ø±Õ×Ô¶¯²¨ÌØÂÊ
-    // ±¾º¯ÊıÊ¹ÓÃµÄ²¨ÌØÂÊÎª115200 ÎªÎŞÏß×ª´®¿ÚÄ£¿éµÄÄ¬ÈÏ²¨ÌØÂÊ ÈçĞèÆäËû²¨ÌØÂÊÇë×ÔĞĞÅäÖÃÄ£¿é²¢ĞŞ¸Ä´®¿ÚµÄ²¨ÌØÂÊ
-    uart_init (WIRELESS_UART_INDEX, WIRELESS_UART_BUAD_RATE, WIRELESS_UART_RX_PIN, WIRELESS_UART_TX_PIN);   // ³õÊ¼»¯´®¿Ú
+#if(0 == WIRELESS_UART_AUTO_BAUD_RATE)                                          // å…³é—­è‡ªåŠ¨æ³¢ç‰¹ç‡
+    // æœ¬å‡½æ•°ä½¿ç”¨çš„æ³¢ç‰¹ç‡ä¸º115200 ä¸ºæ— çº¿è½¬ä¸²å£æ¨¡å—çš„é»˜è®¤æ³¢ç‰¹ç‡ å¦‚éœ€å…¶ä»–æ³¢ç‰¹ç‡è¯·è‡ªè¡Œé…ç½®æ¨¡å—å¹¶ä¿®æ”¹ä¸²å£çš„æ³¢ç‰¹ç‡
+    uart_init (WIRELESS_UART_INDEX, WIRELESS_UART_BUAD_RATE, WIRELESS_UART_RX_PIN, WIRELESS_UART_TX_PIN);   // åˆå§‹åŒ–ä¸²å£
     uart_rx_interrupt(WIRELESS_UART_INDEX, 1);
-#elif(1 == WIRELESS_UART_AUTO_BAUD_RATE)                                        // ¿ªÆô×Ô¶¯²¨ÌØÂÊ
+#elif(1 == WIRELESS_UART_AUTO_BAUD_RATE)                                        // å¼€å¯è‡ªåŠ¨æ³¢ç‰¹ç‡
     uint8 rts_init_status = 0;
     uint16 time_count = 0;
 
@@ -252,42 +270,42 @@ uint8 wireless_uart_init (void)
     wireless_auto_baud_data[2] = 3;
 
     rts_init_status = gpio_get_level(WIRELESS_UART_RTS_PIN);
-    gpio_init(WIRELESS_UART_RTS_PIN, GPO, rts_init_status, GPO_PUSH_PULL);      // ³õÊ¼»¯Á÷¿ØÒı½Å
+    gpio_init(WIRELESS_UART_RTS_PIN, GPO, rts_init_status, GPO_PUSH_PULL);      // åˆå§‹åŒ–æµæ§å¼•è„š
 
-    uart_init (WIRELESS_UART_INDEX, WIRELESS_UART_BUAD_RATE, WIRELESS_UART_RX_PIN, WIRELESS_UART_TX_PIN);   // ³õÊ¼»¯´®¿Ú
+    uart_init (WIRELESS_UART_INDEX, WIRELESS_UART_BUAD_RATE, WIRELESS_UART_RX_PIN, WIRELESS_UART_TX_PIN);   // åˆå§‹åŒ–ä¸²å£
     uart_rx_interrupt(WIRELESS_UART_INDEX, 1);
 
-    system_delay_ms(5);                                                         // Ä£¿éÉÏµçÖ®ºóĞèÒªÑÓÊ±µÈ´ı
-    gpio_set_level(WIRELESS_UART_RTS_PIN, !rts_init_status);                    // RTSÒı½ÅÀ­¸ß£¬½øÈë×Ô¶¯²¨ÌØÂÊÄ£Ê½
-    system_delay_ms(100);                                                       // RTSÀ­¸ßÖ®ºó±ØĞëÑÓÊ±20ms
-    gpio_toggle_level(WIRELESS_UART_RTS_PIN);                                   // RTSÒı½ÅÈ¡·´
+    system_delay_ms(5);                                                         // æ¨¡å—ä¸Šç”µä¹‹åéœ€è¦å»¶æ—¶ç­‰å¾…
+    gpio_set_level(WIRELESS_UART_RTS_PIN, !rts_init_status);                    // RTSå¼•è„šæ‹‰é«˜ï¼Œè¿›å…¥è‡ªåŠ¨æ³¢ç‰¹ç‡æ¨¡å¼
+    system_delay_ms(100);                                                       // RTSæ‹‰é«˜ä¹‹åå¿…é¡»å»¶æ—¶20ms
+    gpio_toggle_level(WIRELESS_UART_RTS_PIN);                                   // RTSå¼•è„šå–å
 
     do
     {
         wireless_auto_baud_flag = WIRELESS_UART_AUTO_BAUD_RATE_START;
-        uart_write_byte(WIRELESS_UART_INDEX, wireless_auto_baud_data[0]);       // ·¢ËÍÌØ¶¨Êı¾İ ÓÃÓÚÄ£¿é×Ô¶¯ÅĞ¶Ï²¨ÌØÂÊ
-        uart_write_byte(WIRELESS_UART_INDEX, wireless_auto_baud_data[1]);       // ·¢ËÍÌØ¶¨Êı¾İ ÓÃÓÚÄ£¿é×Ô¶¯ÅĞ¶Ï²¨ÌØÂÊ
-        uart_write_byte(WIRELESS_UART_INDEX, wireless_auto_baud_data[2]);       // ·¢ËÍÌØ¶¨Êı¾İ ÓÃÓÚÄ£¿é×Ô¶¯ÅĞ¶Ï²¨ÌØÂÊ
+        uart_write_byte(WIRELESS_UART_INDEX, wireless_auto_baud_data[0]);       // å‘é€ç‰¹å®šæ•°æ® ç”¨äºæ¨¡å—è‡ªåŠ¨åˆ¤æ–­æ³¢ç‰¹ç‡
+        uart_write_byte(WIRELESS_UART_INDEX, wireless_auto_baud_data[1]);       // å‘é€ç‰¹å®šæ•°æ® ç”¨äºæ¨¡å—è‡ªåŠ¨åˆ¤æ–­æ³¢ç‰¹ç‡
+        uart_write_byte(WIRELESS_UART_INDEX, wireless_auto_baud_data[2]);       // å‘é€ç‰¹å®šæ•°æ® ç”¨äºæ¨¡å—è‡ªåŠ¨åˆ¤æ–­æ³¢ç‰¹ç‡
         system_delay_ms(20);
 
-        if(WIRELESS_UART_AUTO_BAUD_RATE_GET_ACK != wireless_auto_baud_flag)     // ¼ìÑé×Ô¶¯²¨ÌØÂÊÊÇ·ñÍê³É
+        if(WIRELESS_UART_AUTO_BAUD_RATE_GET_ACK != wireless_auto_baud_flag)     // æ£€éªŒè‡ªåŠ¨æ³¢ç‰¹ç‡æ˜¯å¦å®Œæˆ
         {
-            return_state = 1;                                                   // Èç¹û³ÌĞò½øÈëµ½´ËÓï¾äÄÚ ËµÃ÷×Ô¶¯²¨ÌØÂÊÊ§°ÜÁË
+            return_state = 1;                                                   // å¦‚æœç¨‹åºè¿›å…¥åˆ°æ­¤è¯­å¥å†… è¯´æ˜è‡ªåŠ¨æ³¢ç‰¹ç‡å¤±è´¥äº†
             break;
         }
 
         time_count = 0;
-        if( 0xa5 != wireless_auto_baud_data[0] &&                               // ¼ìÑé×Ô¶¯²¨ÌØÂÊÊÇ·ñÕıÈ·
-            0xff != wireless_auto_baud_data[1] &&                               // ¼ìÑé×Ô¶¯²¨ÌØÂÊÊÇ·ñÕıÈ·
-            0xff != wireless_auto_baud_data[2] )                                // ¼ìÑé×Ô¶¯²¨ÌØÂÊÊÇ·ñÕıÈ·
+        if( 0xa5 != wireless_auto_baud_data[0] &&                               // æ£€éªŒè‡ªåŠ¨æ³¢ç‰¹ç‡æ˜¯å¦æ­£ç¡®
+            0xff != wireless_auto_baud_data[1] &&                               // æ£€éªŒè‡ªåŠ¨æ³¢ç‰¹ç‡æ˜¯å¦æ­£ç¡®
+            0xff != wireless_auto_baud_data[2] )                                // æ£€éªŒè‡ªåŠ¨æ³¢ç‰¹ç‡æ˜¯å¦æ­£ç¡®
         {
-            return_state = 1;                                                   // Èç¹û³ÌĞò½øÈëµ½´ËÓï¾äÄÚ ËµÃ÷×Ô¶¯²¨ÌØÂÊÊ§°ÜÁË
+            return_state = 1;                                                   // å¦‚æœç¨‹åºè¿›å…¥åˆ°æ­¤è¯­å¥å†… è¯´æ˜è‡ªåŠ¨æ³¢ç‰¹ç‡å¤±è´¥äº†
             break;
         }
         wireless_auto_baud_flag = WIRELESS_UART_AUTO_BAUD_RATE_SUCCESS;
 
-        gpio_init(WIRELESS_UART_RTS_PIN, GPI, 0, GPI_PULL_UP);                  // ³õÊ¼»¯Á÷¿ØÒı½Å
-        system_delay_ms(10);                                                    // ÑÓÊ±µÈ´ı Ä£¿é×¼±¸¾ÍĞ÷
+        gpio_init(WIRELESS_UART_RTS_PIN, GPI, 0, GPI_PULL_UP);                  // åˆå§‹åŒ–æµæ§å¼•è„š
+        system_delay_ms(10);                                                    // å»¶æ—¶ç­‰å¾… æ¨¡å—å‡†å¤‡å°±ç»ª
     }while(0);
 #endif
     return return_state;
