@@ -1,48 +1,48 @@
 /*********************************************************************************************************************
-* TC387 Opensourec Library ¼´£¨TC387 ¿ªÔ´¿â£©ÊÇÒ»¸ö»ùÓÚ¹Ù·½ SDK ½Ó¿ÚµÄµÚÈý·½¿ªÔ´¿â
-* Copyright (c) 2022 SEEKFREE Öð·É¿Æ¼¼
+* TC387 Opensourec Library å³ï¼ˆTC387 å¼€æºåº“ï¼‰æ˜¯ä¸€ä¸ªåŸºäºŽå®˜æ–¹ SDK æŽ¥å£çš„ç¬¬ä¸‰æ–¹å¼€æºåº“
+* Copyright (c) 2022 SEEKFREE é€é£žç§‘æŠ€
 *
-* ±¾ÎÄ¼þÊÇ TC387 ¿ªÔ´¿âµÄÒ»²¿·Ö
+* æœ¬æ–‡ä»¶æ˜¯ TC387 å¼€æºåº“çš„ä¸€éƒ¨åˆ†
 *
-* TC387 ¿ªÔ´¿â ÊÇÃâ·ÑÈí¼þ
-* Äú¿ÉÒÔ¸ù¾Ý×ÔÓÉÈí¼þ»ù½ð»á·¢²¼µÄ GPL£¨GNU General Public License£¬¼´ GNUÍ¨ÓÃ¹«¹²Ðí¿ÉÖ¤£©µÄÌõ¿î
-* ¼´ GPL µÄµÚ3°æ£¨¼´ GPL3.0£©»ò£¨ÄúÑ¡ÔñµÄ£©ÈÎºÎºóÀ´µÄ°æ±¾£¬ÖØÐÂ·¢²¼ºÍ/»òÐÞ¸ÄËü
+* TC387 å¼€æºåº“ æ˜¯å…è´¹è½¯ä»¶
+* æ‚¨å¯ä»¥æ ¹æ®è‡ªç”±è½¯ä»¶åŸºé‡‘ä¼šå‘å¸ƒçš„ GPLï¼ˆGNU General Public Licenseï¼Œå³ GNUé€šç”¨å…¬å…±è®¸å¯è¯ï¼‰çš„æ¡æ¬¾
+* å³ GPL çš„ç¬¬3ç‰ˆï¼ˆå³ GPL3.0ï¼‰æˆ–ï¼ˆæ‚¨é€‰æ‹©çš„ï¼‰ä»»ä½•åŽæ¥çš„ç‰ˆæœ¬ï¼Œé‡æ–°å‘å¸ƒå’Œ/æˆ–ä¿®æ”¹å®ƒ
 *
-* ±¾¿ªÔ´¿âµÄ·¢²¼ÊÇÏ£ÍûËüÄÜ·¢»Ó×÷ÓÃ£¬µ«²¢Î´¶ÔÆä×÷ÈÎºÎµÄ±£Ö¤
-* ÉõÖÁÃ»ÓÐÒþº¬µÄÊÊÏúÐÔ»òÊÊºÏÌØ¶¨ÓÃÍ¾µÄ±£Ö¤
-* ¸ü¶àÏ¸½ÚÇë²Î¼û GPL
+* æœ¬å¼€æºåº“çš„å‘å¸ƒæ˜¯å¸Œæœ›å®ƒèƒ½å‘æŒ¥ä½œç”¨ï¼Œä½†å¹¶æœªå¯¹å…¶ä½œä»»ä½•çš„ä¿è¯
+* ç”šè‡³æ²¡æœ‰éšå«çš„é€‚é”€æ€§æˆ–é€‚åˆç‰¹å®šç”¨é€”çš„ä¿è¯
+* æ›´å¤šç»†èŠ‚è¯·å‚è§ GPL
 *
-* ÄúÓ¦¸ÃÔÚÊÕµ½±¾¿ªÔ´¿âµÄÍ¬Ê±ÊÕµ½Ò»·Ý GPL µÄ¸±±¾
-* Èç¹ûÃ»ÓÐ£¬Çë²ÎÔÄ<https://www.gnu.org/licenses/>
+* æ‚¨åº”è¯¥åœ¨æ”¶åˆ°æœ¬å¼€æºåº“çš„åŒæ—¶æ”¶åˆ°ä¸€ä»½ GPL çš„å‰¯æœ¬
+* å¦‚æžœæ²¡æœ‰ï¼Œè¯·å‚é˜…<https://www.gnu.org/licenses/>
 *
-* ¶îÍâ×¢Ã÷£º
-* ±¾¿ªÔ´¿âÊ¹ÓÃ GPL3.0 ¿ªÔ´Ðí¿ÉÖ¤Ð­Òé ÒÔÉÏÐí¿ÉÉêÃ÷ÎªÒëÎÄ°æ±¾
-* Ðí¿ÉÉêÃ÷Ó¢ÎÄ°æÔÚ libraries/doc ÎÄ¼þ¼ÐÏÂµÄ GPL3_permission_statement.txt ÎÄ¼þÖÐ
-* Ðí¿ÉÖ¤¸±±¾ÔÚ libraries ÎÄ¼þ¼ÐÏÂ ¼´¸ÃÎÄ¼þ¼ÐÏÂµÄ LICENSE ÎÄ¼þ
-* »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌÐò µ«ÐÞ¸ÄÄÚÈÝÊ±±ØÐë±£ÁôÖð·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷£¨¼´±¾ÉùÃ÷£©
+* é¢å¤–æ³¨æ˜Žï¼š
+* æœ¬å¼€æºåº“ä½¿ç”¨ GPL3.0 å¼€æºè®¸å¯è¯åè®® ä»¥ä¸Šè®¸å¯ç”³æ˜Žä¸ºè¯‘æ–‡ç‰ˆæœ¬
+* è®¸å¯ç”³æ˜Žè‹±æ–‡ç‰ˆåœ¨ libraries/doc æ–‡ä»¶å¤¹ä¸‹çš„ GPL3_permission_statement.txt æ–‡ä»¶ä¸­
+* è®¸å¯è¯å‰¯æœ¬åœ¨ libraries æ–‡ä»¶å¤¹ä¸‹ å³è¯¥æ–‡ä»¶å¤¹ä¸‹çš„ LICENSE æ–‡ä»¶
+* æ¬¢è¿Žå„ä½ä½¿ç”¨å¹¶ä¼ æ’­æœ¬ç¨‹åº ä½†ä¿®æ”¹å†…å®¹æ—¶å¿…é¡»ä¿ç•™é€é£žç§‘æŠ€çš„ç‰ˆæƒå£°æ˜Žï¼ˆå³æœ¬å£°æ˜Žï¼‰
 *
-* ÎÄ¼þÃû³Æ          zf_device_wireless_uart
-* ¹«Ë¾Ãû³Æ          ³É¶¼Öð·É¿Æ¼¼ÓÐÏÞ¹«Ë¾
-* °æ±¾ÐÅÏ¢          ²é¿´ libraries/doc ÎÄ¼þ¼ÐÄÚ version ÎÄ¼þ °æ±¾ËµÃ÷
-* ¿ª·¢»·¾³          ADS v1.9.20
-* ÊÊÓÃÆ½Ì¨          TC387QP
-* µêÆÌÁ´½Ó          https://seekfree.taobao.com/
+* æ–‡ä»¶åç§°          zf_device_wireless_uart
+* å…¬å¸åç§°          æˆéƒ½é€é£žç§‘æŠ€æœ‰é™å…¬å¸
+* ç‰ˆæœ¬ä¿¡æ¯          æŸ¥çœ‹ libraries/doc æ–‡ä»¶å¤¹å†… version æ–‡ä»¶ ç‰ˆæœ¬è¯´æ˜Ž
+* å¼€å‘çŽ¯å¢ƒ          ADS v1.9.20
+* é€‚ç”¨å¹³å°          TC387QP
+* åº—é“ºé“¾æŽ¥          https://seekfree.taobao.com/
 *
-* ÐÞ¸Ä¼ÇÂ¼
-* ÈÕÆÚ              ×÷Õß                ±¸×¢
+* ä¿®æ”¹è®°å½•
+* æ—¥æœŸ              ä½œè€…                å¤‡æ³¨
 * 2022-11-04       pudding            first version
-* 2023-04-28       pudding            Ôö¼ÓÖÐÎÄ×¢ÊÍËµÃ÷
+* 2023-04-28       pudding            å¢žåŠ ä¸­æ–‡æ³¨é‡Šè¯´æ˜Ž
 ********************************************************************************************************************/
 /*********************************************************************************************************************
-* ½ÓÏß¶¨Òå£º
+* æŽ¥çº¿å®šä¹‰ï¼š
 *                  ------------------------------------
-*                  Ä£¿é¹Ü½Å             µ¥Æ¬»ú¹Ü½Å
-*                  RX                 ²é¿´ zf_device_wireless_uart.h ÖÐ WIRELESS_UART_RX_PINx ºê¶¨Òå
-*                  TX                 ²é¿´ zf_device_wireless_uart.h ÖÐ WIRELESS_UART_TX_PINx ºê¶¨Òå
-*                  RTS                ²é¿´ zf_device_wireless_uart.h ÖÐ WIRELESS_UART_RTS_PINx ºê¶¨Òå
-*                  VCC                3.3VµçÔ´
-*                  GND                µçÔ´µØ
-*                  ÆäÓàÒý½ÅÐü¿Õ
+*                  æ¨¡å—ç®¡è„š             å•ç‰‡æœºç®¡è„š
+*                  RX                 æŸ¥çœ‹ zf_device_wireless_uart.h ä¸­ WIRELESS_UART_RX_PINx å®å®šä¹‰
+*                  TX                 æŸ¥çœ‹ zf_device_wireless_uart.h ä¸­ WIRELESS_UART_TX_PINx å®å®šä¹‰
+*                  RTS                æŸ¥çœ‹ zf_device_wireless_uart.h ä¸­ WIRELESS_UART_RTS_PINx å®å®šä¹‰
+*                  VCC                3.3Vç”µæº
+*                  GND                ç”µæºåœ°
+*                  å…¶ä½™å¼•è„šæ‚¬ç©º
 *                  ------------------------------------
 ********************************************************************************************************************/
 
@@ -50,26 +50,26 @@
 #define _zf_device_wireless_uart_h_
 
 #include "zf_common_typedef.h"
-//================================================¶¨Òå ÎÞÏß´®¿Ú »ù±¾ÅäÖÃ===================================================
-#define WIRELESS_UART_INDEX         (UART_2)                                    // ÎÞÏß´®¿Ú¶ÔÓ¦Ê¹ÓÃµÄ´®¿ÚºÅ
-#define WIRELESS_UART_BUAD_RATE     (115200)                                    // ÎÞÏß´®¿Ú¶ÔÓ¦Ê¹ÓÃµÄ´®¿Ú²¨ÌØÂÊ
-#define WIRELESS_UART_TX_PIN        (UART2_RX_P10_6)                            // ÎÞÏß´®¿Ú¶ÔÓ¦Ä£¿éµÄ TX Òª½Óµ½µ¥Æ¬»úµÄ RX
-#define WIRELESS_UART_RX_PIN        (UART2_TX_P10_5)                            // ÎÞÏß´®¿Ú¶ÔÓ¦Ä£¿éµÄ RX Òª½Óµ½µ¥Æ¬»úµÄ TX
-#define WIRELESS_UART_RTS_PIN       (P10_2)                                     // ÎÞÏß´®¿Ú¶ÔÓ¦Ä£¿éµÄ RTS Òý½Å
-//====================================================×Ô¶¯²¨ÌØÂÊ====================================================
-// ×¢ÒâÊÂÏî1£ºÎÞÏß×ª´®¿ÚÄ£¿é°æ±¾ÊÇV2.0ÒÔÏÂµÄÊÇÎÞ·¨¿ªÆô×Ô¶¯²¨ÌØÂÊµÄ¡£
-// ×¢ÒâÊÂÏî2£º¿ªÆô×Ô¶¯²¨ÌØÂÊÎñ±ØÁ¬½ÓRTSÒý½Å ·ñÔò»á¿ªÆôÊ§°Ü¡£
-// ×¢ÒâÊÂÏî3£ºÄ£¿é×Ô¶¯²¨ÌØÂÊÊ§°ÜµÄ»° ¿ÉÒÔ³¢ÊÔ¶ÏµçÖØÆô
+//================================================å®šä¹‰ æ— çº¿ä¸²å£ åŸºæœ¬é…ç½®===================================================
+#define WIRELESS_UART_INDEX         (UART_2)                                    // æ— çº¿ä¸²å£å¯¹åº”ä½¿ç”¨çš„ä¸²å£å·
+#define WIRELESS_UART_BUAD_RATE     (115200)                                    // æ— çº¿ä¸²å£å¯¹åº”ä½¿ç”¨çš„ä¸²å£æ³¢ç‰¹çŽ‡
+#define WIRELESS_UART_TX_PIN        (UART2_RX_P10_6)                            // æ— çº¿ä¸²å£å¯¹åº”æ¨¡å—çš„ TX è¦æŽ¥åˆ°å•ç‰‡æœºçš„ RX
+#define WIRELESS_UART_RX_PIN        (UART2_TX_P10_5)                            // æ— çº¿ä¸²å£å¯¹åº”æ¨¡å—çš„ RX è¦æŽ¥åˆ°å•ç‰‡æœºçš„ TX
+#define WIRELESS_UART_RTS_PIN       (P10_2)                                     // æ— çº¿ä¸²å£å¯¹åº”æ¨¡å—çš„ RTS å¼•è„š
+//====================================================è‡ªåŠ¨æ³¢ç‰¹çŽ‡====================================================
+// æ³¨æ„äº‹é¡¹1ï¼šæ— çº¿è½¬ä¸²å£æ¨¡å—ç‰ˆæœ¬æ˜¯V2.0ä»¥ä¸‹çš„æ˜¯æ— æ³•å¼€å¯è‡ªåŠ¨æ³¢ç‰¹çŽ‡çš„ã€‚
+// æ³¨æ„äº‹é¡¹2ï¼šå¼€å¯è‡ªåŠ¨æ³¢ç‰¹çŽ‡åŠ¡å¿…è¿žæŽ¥RTSå¼•è„š å¦åˆ™ä¼šå¼€å¯å¤±è´¥ã€‚
+// æ³¨æ„äº‹é¡¹3ï¼šæ¨¡å—è‡ªåŠ¨æ³¢ç‰¹çŽ‡å¤±è´¥çš„è¯ å¯ä»¥å°è¯•æ–­ç”µé‡å¯
 
-// ¿ªÆô×Ô¶¯²¨ÌØÂÊÎñ±ØÔÄ¶ÁÉÏÃæÁ½Ìõ ×¢ÒâÊÂÏî
-// ¿ªÆô×Ô¶¯²¨ÌØÂÊÎñ±ØÔÄ¶ÁÉÏÃæÁ½Ìõ ×¢ÒâÊÂÏî
-// ¿ªÆô×Ô¶¯²¨ÌØÂÊÎñ±ØÔÄ¶ÁÉÏÃæÁ½Ìõ ×¢ÒâÊÂÏî
+// å¼€å¯è‡ªåŠ¨æ³¢ç‰¹çŽ‡åŠ¡å¿…é˜…è¯»ä¸Šé¢ä¸¤æ¡ æ³¨æ„äº‹é¡¹
+// å¼€å¯è‡ªåŠ¨æ³¢ç‰¹çŽ‡åŠ¡å¿…é˜…è¯»ä¸Šé¢ä¸¤æ¡ æ³¨æ„äº‹é¡¹
+// å¼€å¯è‡ªåŠ¨æ³¢ç‰¹çŽ‡åŠ¡å¿…é˜…è¯»ä¸Šé¢ä¸¤æ¡ æ³¨æ„äº‹é¡¹
 
-// 0£º¹Ø±Õ×Ô¶¯²¨ÌØÂÊ  
-// 1£º¿ªÆô×Ô¶¯²¨ÌØÂÊ ×Ô¶¯²¨ÌØÂÊµÄ×÷ÓÃÊÇÐÞ¸Ä WIRELESS_UART_BAUD Ö®ºó²»ÐèÒª¶ÔÄ£¿é½øÐÐÅäÖÃ Ä£¿é»á×Ô¶¯ÉèÖÃÎª¶ÔÓ¦µÄ²¨ÌØÂÊ
+// 0ï¼šå…³é—­è‡ªåŠ¨æ³¢ç‰¹çŽ‡
+// 1ï¼šå¼€å¯è‡ªåŠ¨æ³¢ç‰¹çŽ‡ è‡ªåŠ¨æ³¢ç‰¹çŽ‡çš„ä½œç”¨æ˜¯ä¿®æ”¹ WIRELESS_UART_BAUD ä¹‹åŽä¸éœ€è¦å¯¹æ¨¡å—è¿›è¡Œé…ç½® æ¨¡å—ä¼šè‡ªåŠ¨è®¾ç½®ä¸ºå¯¹åº”çš„æ³¢ç‰¹çŽ‡
 
 #define WIRELESS_UART_AUTO_BAUD_RATE    ( 1 )
-//====================================================×Ô¶¯²¨ÌØÂÊ====================================================
+//====================================================è‡ªåŠ¨æ³¢ç‰¹çŽ‡====================================================
 #if (1 == WIRELESS_UART_AUTO_BAUD_RATE)
 typedef enum
 {
@@ -82,10 +82,10 @@ typedef enum
 
 #define WIRELESS_UART_BUFFER_SIZE       ( 64   )
 #define WIRELESS_UART_TIMEOUT_COUNT     ( 0x64 )
-//================================================¶¨Òå ÎÞÏß´®¿Ú »ù±¾ÅäÖÃ===================================================
+//================================================å®šä¹‰ æ— çº¿ä¸²å£ åŸºæœ¬é…ç½®===================================================
 
 
-//================================================ÉùÃ÷ ÎÞÏß´®¿Ú »ù´¡º¯Êý===================================================
+//================================================å£°æ˜Ž æ— çº¿ä¸²å£ åŸºç¡€å‡½æ•°===================================================
 uint32      wireless_uart_send_byte         (const uint8 data);
 uint32      wireless_uart_send_buffer      (const uint8 *buff, uint32 len);
 uint32      wireless_uart_send_string       (const char *str);
@@ -96,8 +96,8 @@ uint32      wireless_uart_read_buffer       (uint8 *buff, uint32 len);
 void        wireless_uart_callback          (void);
 
 uint8       wireless_uart_init              (void);
-//================================================ÉùÃ÷ ÎÞÏß´®¿Ú »ù´¡º¯Êý===================================================
-
+//================================================å£°æ˜Ž æ— çº¿ä¸²å£ åŸºç¡€å‡½æ•°===================================================
+void wireless_send_number(uint32_t number);
 #endif
 
 
