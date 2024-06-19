@@ -41,6 +41,8 @@
 #include "servo.h"
 #include "encoder.h"
 #include "isr.h"
+#include "led.h"
+#include "imagprocess.h"
 // **************************** 自定义库区域 ****************************
 
 // **************************** 代码区域 ****************************
@@ -50,22 +52,22 @@ int core0_main(void)
     debug_init();                   // 初始化默认调试串口
     // 此处编写用户代码 例如外设初始化代码等
 
-
     motor_init();
-    motor2_setdir(Forward);
-    motor2_setduty(18);
     servo_init();
     encoder_init();
     isr_init();
+    led_init();
 
-    // 此处编写用户代码 例如外设初始化代码等
     cpu_wait_event_ready();         // 等待所有核心初始化完毕
     while (TRUE)
     {
-        // 此处编写需要循环执行的代码
+        if(mt9v03x_finish_flag)
+        {
+            imag_proc();
+            ips114_displayimage03x((const uint8 *)binary_imag, MT9V03X_W, MT9V03X_H);                             // 显示原始图像
+            mt9v03x_finish_flag = 0;
 
-
-        // 此处编写需要循环执行的代码
+        }
     }
 }
 

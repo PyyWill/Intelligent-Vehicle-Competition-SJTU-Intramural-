@@ -5,21 +5,29 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../code/encoder.c \
+../code/imagprocess.c \
+../code/led.c \
 ../code/motor.c \
 ../code/servo.c 
 
 COMPILED_SRCS += \
 ./code/encoder.src \
+./code/imagprocess.src \
+./code/led.src \
 ./code/motor.src \
 ./code/servo.src 
 
 C_DEPS += \
 ./code/encoder.d \
+./code/imagprocess.d \
+./code/led.d \
 ./code/motor.d \
 ./code/servo.d 
 
 OBJS += \
 ./code/encoder.o \
+./code/imagprocess.o \
+./code/led.o \
 ./code/motor.o \
 ./code/servo.o 
 
@@ -44,7 +52,7 @@ code/%.o: ./code/%.src code/subdir.mk
 clean: clean-code
 
 clean-code:
-	-$(RM) ./code/encoder.d ./code/encoder.o ./code/encoder.src ./code/motor.d ./code/motor.o ./code/motor.src ./code/servo.d ./code/servo.o ./code/servo.src
+	-$(RM) ./code/encoder.d ./code/encoder.o ./code/encoder.src ./code/imagprocess.d ./code/imagprocess.o ./code/imagprocess.src ./code/led.d ./code/led.o ./code/led.src ./code/motor.d ./code/motor.o ./code/motor.src ./code/servo.d ./code/servo.o ./code/servo.src
 
 .PHONY: clean-code
 

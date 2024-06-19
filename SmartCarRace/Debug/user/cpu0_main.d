@@ -328,3 +328,9 @@ user/cpu0_main.o :	../user/isr.h
 ../user/isr.h :
 user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_common/zf_common_headfile.h
 e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_common/zf_common_headfile.h :
+user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/led.h
+e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/led.h :
+user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/imagprocess.h
+e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/code/imagprocess.h :
+user/cpu0_main.o :	e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_common/zf_common_headfile.h
+e:/GitRepository/Intelligent-Vehicle-Competition-SJTU-Intramural-/SmartCarRace/libraries/zf_common/zf_common_headfile.h :
