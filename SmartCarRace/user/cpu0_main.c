@@ -63,10 +63,8 @@ int core0_main(void)
     {
         if(mt9v03x_finish_flag)
         {
-            imag_proc();
-            ips114_displayimage03x((const uint8 *)binary_imag, MT9V03X_W, MT9V03X_H);                             // œ‘ æ‘≠ ºÕºœÒ
+            imag_process();
             mt9v03x_finish_flag = 0;
-
         }
     }
 }
