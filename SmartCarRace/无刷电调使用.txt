@@ -1,0 +1,4 @@
+代码中先定义好管脚：#define PWM_1              (ATOM0_CH0_P21_2)        
+然后在主程序中设定频率：    pwm_init(PWM_1, 50, 0);50hz
+	while (TRUE)中：	    pwm_set_duty(PWM_1, 550);
+即可
